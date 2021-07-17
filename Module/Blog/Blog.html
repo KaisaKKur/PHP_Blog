@@ -1,0 +1,108 @@
+
+<div class="container">
+  <div class="row g-5 pt-2 mb-4">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">From the KKur Coding, Typing !!!</h3>
+
+      <div class="card mb-1">
+        <div class="card-body m-4">
+          <h5 id="blog-article-title" class="card-title">Title</h5>
+          <h6 id="blog-article-date" class="card-subtitle mb-2 text-muted">Date</h6>
+          <p id="blog-article-content" class="card-text mt-4">Content.</p>
+          
+        </div>
+
+        <div class="d-flex justify-content-center mb-4">
+          <div class="col-10 border-bottom d-flex justify-content-between">
+            <div></div>
+            <p class="d-flex justify-content-center text-muted mb-1">End</p>
+            <form method="POST">
+              <button id="like-button" type="submit" name="like" class="btn btn-secondary" value="like"><!-- value="unlike" -->
+                <i id="like" class="bi bi-hand-thumbs-up"></i>
+                <!-- <i id="like" class="bi bi-hand-thumbs-up-fill"></i> -->
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="accordion" id="accordion-advanced">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="head-1">
+              <button class="accordion-button pt-2 pb-2 d-flex flex-row-reverse" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                <p class="mx-3 my-0 text-success">Comment</p>
+              </button>
+            </h2>
+            <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="head-1" data-bs-parent="#accordion-advanced">
+              <div class="accordion-body">
+                <div class="col-12 d-flex justify-content-end mb-3">
+                  <div class="mx-3">
+                    <h6 class="text-uppercase fw-normal">Comment here =></h6>
+                    <p class="text-secondary">Anyway, your comment 都是对 KKur 最大 support.</p>
+                  </div>
+
+                  <div class="col-7 me-3">
+                    <form method="POST">
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="comment" class="form-label">Comment</label>
+                        <textarea name="comment" class="form-control" id="comment" rows="3" placeholder="不打算来两句？"></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button type="submit" name="save" class="btn btn-primary">Save</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <div class="col-10 border-top">
+            <p class="d-flex justify-content-center text-muted">Start</p>
+          </div>
+        </div>
+
+        <div id="comments" class="d-flex justify-content-center">
+          <p class="text-muted">No 人留下 Comment...</p>
+          <!-- <div class="mx-4 border rounded mt-2 mb-1 p-2">
+            <div class="mb-1">
+              <textarea name="comment" class="form-control bg-transparent" id="comment" rows="1" disabled></textarea>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-light">Comment By</span>
+              <input type="text" name="email" class="form-control bg-transparent" aria-describedby="email" value="" disabled>
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">想留下点什么。</p>
+        </div>
+
+        <div id="archives" class="p-4">
+          <!--  -->
+        </div>
+ 
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a id="link-github" href="#">GitHub</a></li>
+            <li><a id="link-here" data-bs-toggle="tooltip" title="Just there, no way" href="#">Here</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

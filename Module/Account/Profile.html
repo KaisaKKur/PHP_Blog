@@ -1,0 +1,112 @@
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+
+    <div class="col-6">
+      <form class="row g-3" method="POST">
+        <div class="col-12">
+          <div class="col-md-5">
+            <label for="nickname" class="form-label">Nickname</label>
+            <input type="text" name="nickname" class="form-control" id="nickname" />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-md-4">
+            <label for="phone-number" class="form-label">Phone Number</label>
+            <input type="text" name="phone-number" class="form-control" id="phone-number" />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-md-3">
+            <label for="birthday" class="form-label">Birthday</label>
+            <input type="text" name="birthday" class="form-control" id="birthday" placeholder="YYYY-MM-DD" />
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="col-md-2">
+            <label for="sex" class="form-label">Sex</label>
+            <select id="sex" name="sex" class="form-select">
+              <option value="true">Man</option>
+              <option value="false">Woman</option>
+              <option selected></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" name="update-profile" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-6 mt-3">
+      <div class="row" style="height: 100%;">
+        <div class="col-6 d-flex align-items-start flex-column bd-highlight" style="height: 100%;">
+          <div class="accordion mb-auto" id="accordion-advanced">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="head-1">
+                <button class="accordion-button btn-warning pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Advanced</button>
+              </h2>
+              <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="head-1" data-bs-parent="#accordion-advanced">
+                <div class="accordion-body">
+                  <form method="POST">
+                    <div class="mb-3">
+                      <label for="old-password" class="form-label">Old Password</label>
+                      <input type="password" name="old-password" class="form-control" id="old-password" aria-describedby="old-password">
+                      <div id="old-password-help" class="form-text">这不可能忘了吧。</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="new-password" class="form-label">New Password</label>
+                      <input type="password" name="new-password" class="form-control" id="new-password">
+                      <div id="new-password-help" class="form-text">8-40个字符[\w.]，这都不懂？</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirm-password" class="form-label">Confirm New Password</label>
+                      <input type="password" name="confirm-password" class="form-control" id="confirm-password">
+                      <div id="confirm-password-help" class="form-text">这还没开始呢，就忘了？</div>
+                    </div>
+                    <button type="submit" name="update-password" class="btn btn-primary">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="accordion-delete">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="head-2">
+                <button class="accordion-button btn-danger pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Delete</button>
+              </h2>
+              <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="head-2" data-bs-parent="#accordion-delete">
+                <div class="accordion-body">
+                  <form method="POST">
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input type="password" name="request-password" class="form-control">
+                      <div class="form-text">别了，忘了就去翻翻脑子里的淤泥。</div>
+                    </div>
+                    <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

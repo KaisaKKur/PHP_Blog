@@ -1,0 +1,194 @@
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+
+    <div class="col-8">
+      <form method="POST">
+        <div class="row g-3">
+          <div class="col-12 input-group">
+              <span class="input-group-text" id="title-span">Title</span>
+              <input type="text" name="title" id="title" class="form-control" placeholder="Type title here..." aria-describedby="title-span">
+              <button type="submit" name="new" value="new" id="new" class="btn btn-success col-2">New</button>
+              <button type="submit" name="delete" value="new" id="delete" class="btn btn-danger col-2" disabled>Delete</button>
+          </div>
+
+          <div class="col-12 input-group">
+            <span id="category-span" class="input-group-text">Category</span>
+            <select name="category" id="category" class="form-select" aria-label="category-span">
+              <option value="Other" selected>Other</option>
+              <option value="Life">Life</option>
+              <option value="Study">Study</option>
+            </select>
+          </div>
+
+          <div class="col-12 input-group">
+            <span class="input-group-text align-items-start">With Content</span>
+            <textarea name="content" id="content" class="form-control" aria-label="With Content" rows="16" placeholder="Typing! Just Typing..."></textarea>
+          </div>
+          
+          <div class="col-12 input-group">
+            <div class="col-10">
+              <div class="accordion" id="accordion-tag">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="head-1">
+                    <button class="accordion-button pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Tag</button>
+                  </h2>
+                  <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="head-1" data-bs-parent="#accordion-tag">
+                    <div class="accordion-body">
+                      <div id="checkbox-tags" class="container">
+                        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="1" id="tag-1">
+                              <label class="form-check-label" for="Tag-1">游戏</label>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="2" id="tag-2">
+                              <label class="form-check-label" for="Tag-2">食品</label>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="form-check">
+                              <input  name="tags[]" class="form-check-input" type="checkbox" value="3" id="tag-3">
+                              <label class="form-check-label" for="Tag-3">购物</label>
+                            </div>
+                          </div>
+                          
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="4" id="tag-4">
+                              <label class="form-check-label" for="Tag-4">程序设计</label>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="5" id="tag-5">
+                              <label class="form-check-label" for="Tag-5">旅游</label>
+                            </div>
+                          </div>
+                          
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="6" id="tag-6">
+                              <label class="form-check-label" for="Tag-6">建模</label>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="form-check">
+                              <input name="tags[]" class="form-check-input" type="checkbox" value="7" id="tag-7">
+                              <label class="form-check-label" for="Tag-7">应用程序</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button type="submit" name="save" value="new" id="new-update" class="btn btn-primary col-2">Save</button>
+          </div>
+        </div>
+
+        <div id="comment-collapse" class="col-12 mt-3 d-none">
+          <div class="accordion" id="accordion-comments">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="head-comments">
+                <button class="accordion-button d-flex flex-row-reverse pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-comments" aria-expanded="true" aria-controls="collapse-comments">
+                  <p class="mx-3 my-0">Comments</p>
+                </button>
+              </h2>
+              <div id="collapse-comments" class="accordion-collapse collapse" aria-labelledby="head-comments" data-bs-parent="#accordion-comments">
+                <div id="comments" class="accordion-body py-0">
+
+                  <div id="comment-null" class="d-flex justify-content-center mt-3">
+                    <p class="text-muted">NULL NULL 如也</p>
+                  </div>
+
+                  <!-- <div class="bg-light border mt-3 mb-2 p-2">
+                    <div class="mb-1">
+                      <textarea class="form-control bg-white" rows="1" disabled></textarea>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light">Comment By</span>
+                      <input type="text" class="form-control bg-white" value="" disabled>
+                      <button type="submit" name="delete-comment" value="delete-comment" id="delete-comment" class="btn btn-danger col-2">Delete</button>
+                    </div>
+                  </div> -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="col-4">
+      <div class="d-flex justify-content-center border-top border-bottom mb-3 py-1">
+        <div class="border-start border-end px-4">
+          <p class="fs-2 m-0 text-info">All My Heart Blood</p>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordion-list">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="head-life">
+            <button class="accordion-button text-success fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-life" aria-expanded="true" aria-controls="collapse-life">Life</button>
+          </h2>
+          <div id="collapse-life" class="accordion-collapse collapse" aria-labelledby="head-life" data-bs-parent="#accordion-list">
+            <div class="accordion-body p-1">
+              <div style="height: 512px; overflow-y:scroll">
+                <div id="list-life" class="list-group">
+                  <!-- <a href="#" class="list-group-item list-group-item-action">Title</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="head-study">
+            <button class="accordion-button text-success fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-study" aria-expanded="true" aria-controls="collapse-study">Study</button>
+          </h2>
+          <div id="collapse-study" class="accordion-collapse collapse" aria-labelledby="head-study" data-bs-parent="#accordion-list">
+            <div class="accordion-body p-1">
+              <div style="height: 512px; overflow-y:scroll">
+                <div id="list-study" class="list-group">
+                  <!-- <a href="#" class="list-group-item list-group-item-action">Title</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="head-other">
+            <button class="accordion-button text-success fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-other" aria-expanded="true" aria-controls="collapse-other">Other</button>
+          </h2>
+          <div id="collapse-other" class="accordion-collapse collapse" aria-labelledby="head-other" data-bs-parent="#accordion-list">
+            <div class="accordion-body p-1">
+              <div style="height: 512px; overflow-y:scroll">
+                <div id="list-other" class="list-group">
+                  <!-- <a href="#" class="list-group-item list-group-item-action">Title</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

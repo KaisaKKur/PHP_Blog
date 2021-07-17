@@ -1,0 +1,16 @@
+
+<script>
+  var protocol = window.location.protocol;
+  var hostname = window.location.hostname;
+  var root = protocol + "//" + hostname + "/";
+  $(document).ready(function() {
+      $("#home-footer").attr("href", root);
+      $("#contact-footer").attr("href", root);
+  });
+</script>
+
+<footer class="kaisa-blog-footer">
+  <p>Blog by <a id="home-footer" href="#">KKur</a> by <a id="contact-footer" href="#">@Kaisa</a>.</p>
+  <p><a href="#">Back to top</a></p>
+</footer>
+
